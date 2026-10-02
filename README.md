@@ -6,6 +6,7 @@
 ![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)
 ![Telegram](https://img.shields.io/badge/Telegram-26A5E4?logo=telegram&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white)
+[![Licencia: MIT](https://img.shields.io/badge/Licencia-MIT-yellow.svg)](LICENSE)
 
 > Avisos en Telegram de los anuncios nuevos de Wallapop que te interesan
 
@@ -181,3 +182,9 @@ Los tiempos de comprobación y los parámetros de la API de Wallapop están en
 Wallapop es una marca de Wallapop S.L. Este bot es un proyecto independiente, sin
 relación con Wallapop, y usa su API web no oficial, que puede cambiar en cualquier
 momento. Úsalo de forma responsable y respetando sus condiciones de uso.
+
+---
+
+## Licencia
+
+Distribuido bajo la licencia [MIT](LICENSE).
