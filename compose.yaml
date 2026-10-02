@@ -1,7 +1,7 @@
 services:
   bot:
     build: .
-    image: wallapop-telegram-bot
+    image: wallaalert
     restart: unless-stopped
     init: true # reenvía bien las señales de parada al proceso de Node
     env_file: .env # TELEGRAM_BOT_TOKEN y TELEGRAM_ADMIN_ID
@@ -13,3 +13,4 @@ services:
 
 volumes:
   bot-data:
+    name: wallaalert-data # nombre fijo, no depende de la carpeta del proyecto

@@ -156,12 +156,10 @@ Los tiempos del bot están en `config.json`, sección `monitor`:
 
 Bajar `intervalMs` hace que los avisos lleguen antes, pero aumenta las consultas a Wallapop y el riesgo de que bloquee el bot. Los cambios en `config.json` se aplican con `docker compose up -d --build`, porque el archivo va dentro de la imagen.
 
-Los datos (usuarios, búsquedas y anuncios vistos) se guardan en el volumen de Docker `bot-data` (o en `data/bot.db` si lo arrancas sin Docker). Para hacer una copia de seguridad, para el bot antes de copiar la base de datos: mientras está en marcha, los últimos cambios pueden estar todavía en el archivo `bot.db-wal`. Con Docker:
+Los datos (usuarios, búsquedas y anuncios vistos) se guardan en el volumen de Docker `wallaalert-data` (o en `data/bot.db` si lo arrancas sin Docker). Para hacer una copia de seguridad, para el bot antes de copiar la base de datos: mientras está en marcha, los últimos cambios pueden estar todavía en el archivo `bot.db-wal`. Con Docker:
 
 ```bash
 docker compose down
-docker run --rm -v telegrambot_bot-data:/data -v "$PWD":/backup alpine cp /data/bot.db /backup/bot-backup.db
+docker run --rm -v wallaalert-data:/data -v "$PWD":/backup alpine cp /data/bot.db /backup/bot-backup.db
 docker compose up -d
 ```
-
-El volumen se llama `<carpeta del proyecto>_bot-data` (aquí, `telegrambot_bot-data`); compruébalo con `docker volume ls`.

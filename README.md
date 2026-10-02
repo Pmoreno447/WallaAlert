@@ -1,6 +1,6 @@
 **Esta app ha sido vibecodeada con [Claude Code](https://claude.com/claude-code).**
 
-# Wallapop Telegram Bot
+# WallaAlert
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)
@@ -78,8 +78,8 @@ el **token** que te da.
 ### 2. Configurar
 
 ```bash
-git clone <url-de-este-repositorio>
-cd TelegramBot
+git clone https://github.com/Pmoreno447/WallaAlert.git
+cd WallaAlert
 cp .env.example .env   # pon el token en TELEGRAM_BOT_TOKEN y, de momento, TELEGRAM_ADMIN_ID=0
 ```
 
@@ -105,7 +105,7 @@ docker compose up -d --build
 | `docker compose logs -f` | Ver lo que va haciendo el bot |
 | `docker compose up -d` | Aplicar cambios en `.env` (recrea el contenedor) |
 | `docker compose up -d --build` | Aplicar cambios en `config.json` o en el código (reconstruye la imagen) |
-| `docker compose down` | Pararlo. Los datos se conservan en el volumen `bot-data` |
+| `docker compose down` | Pararlo. Los datos se conservan en el volumen `wallaalert-data` |
 | `docker compose exec bot node --disable-warning=ExperimentalWarning dist/cli/subscriptions.js list` | Usar el CLI de suscripciones dentro del contenedor |
 
 La imagen funciona en `amd64` y `arm64` (Raspberry Pi incluida). Cada versión
