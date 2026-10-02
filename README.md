@@ -1,4 +1,4 @@
-**Esta app ha sido vibecodeada con [Claude Code](https://claude.com/claude-code).**
+**Desarrollado con [Claude Code](https://claude.com/claude-code) como asistente. Yo definí los requisitos y las decisiones de diseño (multiusuario, control de acceso, persistencia, despliegue) y revisé el resultado.**
 
 # WallaAlert
 
