@@ -1,0 +1,15 @@
+services:
+  bot:
+    build: .
+    image: wallapop-telegram-bot
+    restart: unless-stopped
+    init: true # reenvía bien las señales de parada al proceso de Node
+    env_file: .env # TELEGRAM_BOT_TOKEN y TELEGRAM_ADMIN_ID
+    environment:
+      DATABASE_PATH: /data/bot.db # tiene prioridad sobre .env: la base de datos va siempre al volumen
+      TZ: Europe/Madrid # zona horaria de los registros
+    volumes:
+      - bot-data:/data
+
+volumes:
+  bot-data:

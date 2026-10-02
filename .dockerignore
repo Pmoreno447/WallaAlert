@@ -1,0 +1,19 @@
+# Secretos y datos: nunca deben acabar dentro de la imagen.
+.env
+.env.*
+!.env.example
+data
+*.db
+*.db-*
+
+# Se generan dentro de la imagen
+node_modules
+dist
+
+# No hacen falta para ejecutar el bot
+.git
+.github
+test
+docs
+*.md
+.DS_Store

@@ -1,0 +1,27 @@
+{
+  "name": "wallapop-telegram-bot",
+  "version": "1.0.0",
+  "description": "Bot de Telegram que notifica nuevos productos de Wallapop",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "search": "tsx src/cli/search.ts",
+    "typecheck": "tsc -p tsconfig.test.json",
+    "test": "tsx --disable-warning=ExperimentalWarning --test \"test/**/*.test.ts\"",
+    "start": "tsx --disable-warning=ExperimentalWarning src/index.ts",
+    "cli": "tsx --disable-warning=ExperimentalWarning src/cli/subscriptions.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@grammyjs/auto-retry": "^2.0.2",
+    "grammy": "^1.46.0"
+  }
+}

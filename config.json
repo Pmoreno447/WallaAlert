@@ -1,0 +1,31 @@
+{
+  "api": {
+    "baseUrl": "https://api.wallapop.com/api/v3/search",
+    "categoriesUrl": "https://api.wallapop.com/api/v3/categories",
+    "searchParam": "keywords",
+    "filterParams": {
+      "minPrice": "min_sale_price",
+      "maxPrice": "max_sale_price",
+      "categoryId": "category_id",
+      "subcategoryId": "subcategory_ids"
+    },
+    "defaultParams": {
+      "source": "search_box",
+      "order_by": "newest"
+    },
+    "headers": {
+      "Accept": "application/json",
+      "X-DeviceOS": "0",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36"
+    },
+    "timeoutMs": 10000
+  },
+  "database": {
+    "path": "data/bot.db"
+  },
+  "monitor": {
+    "intervalMs": 60000,
+    "requestDelayMs": 2000,
+    "maxSeenPerSubscription": 200
+  }
+}
